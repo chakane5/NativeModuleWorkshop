@@ -24,4 +24,12 @@ public class ToastModule extends ReactContextBaseJavaModule {
         Toast toast = Toast.makeText(context, message, duration);
         toast.show();
     }
+
+    @Override
+    public Map<String, Object> getConstants() {
+        final Map<String, Object> constants = new HashMap<>();
+        constants.put("SHORT", Toast.LENGTH_SHORT);
+        constants.put("LONG", Toast.LENGTH_LONG);
+        return constants;
+    }
 }
